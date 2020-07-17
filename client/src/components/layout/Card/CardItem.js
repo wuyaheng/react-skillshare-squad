@@ -58,7 +58,7 @@ const CardItem = ({ profile }) => {
             <p>
                 <button className="btn btn-dark btn-sm" onClick={() => setCurrent(profile)}>Edit</button>
                 <button className="btn btn-danger btn-sm" onClick={onDelete}>Delete</button>
-                <Link to={{pathname:`/detail/${_id}`, query:{bio: bio, address:city}}} className="btn btn-success btn-sm">Read More</Link>
+                <Link to={{pathname:`/detail/${_id}`, query:{firstname: firstname, lastname: lastname, bio: bio, city: city, zipcode: zipcode}}} className="btn btn-success btn-sm">Read More</Link>
 
 
             </p>
