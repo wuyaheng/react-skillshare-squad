@@ -9,23 +9,24 @@
   },
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js",
-    "client": "npm start --prefix client",
-    "clientinstall": "npm install --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "nodemon server.js",
+    "dev:client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PhoebeYahengWu/react-contact-keeper.git"
+    "url": "https://git.heroku.com/react-skillshare-squad.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PhoebeYahengWu/react-contact-keeper/issues"
+    "url": "https://github.com/PhoebeYahengWu/react-skillshare-squad/issues"
   },
-  "homepage": "https://github.com/PhoebeYahengWu/react-contact-keeper#readme",
+  "homepage": "https://github.com/PhoebeYahengWu/react-skillshare-squad#readme",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "axios": "^0.19.2",
@@ -55,3 +56,4 @@
     "nodemon": "^2.0.4"
   }
 }
+
