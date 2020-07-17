@@ -57,6 +57,7 @@ const CardItem = ({ profile }) => {
             <p>
                 <button className="btn btn-dark btn-sm" onClick={() => setCurrent(profile)}>Edit</button>
                 <button className="btn btn-danger btn-sm" onClick={onDelete}>Delete</button>
+                <button className="btn btn-success btn-sm" onClick={onDelete}>Read More</button>
 
             </p>
         </div>
