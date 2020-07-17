@@ -4,6 +4,11 @@ import ProfileContext from '../../../context/profile/profileContext';
 import CardItem from './CardItem';
 import Spinner from '../Spinner';
 
+const gridContainerStyle = {
+    display: "grid",
+    gridTemplateColumns: "auto auto auto",
+    padding: "10px"
+  }
 
 const Card = () => { 
     const profileContext = useContext(ProfileContext);
@@ -23,8 +28,10 @@ const Card = () => {
 
     return (
         <Fragment>
+       
         {profiles !== null && !loading ? (
             <TransitionGroup>
+            <div style={gridContainerStyle}>
             {filtered !== null
              ? filtered.map(profile => (
                  <CSSTransition key={profile._id} timeout={500} classNames="item">
@@ -36,9 +43,9 @@ const Card = () => {
                 <CardItem profile={profile} />
                 </CSSTransition>
             ))}
+            </div>
             </TransitionGroup>      
         ): <Spinner/>}
-           
         </Fragment>
     );
 };
