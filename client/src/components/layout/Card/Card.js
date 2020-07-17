@@ -3,12 +3,16 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import ProfileContext from '../../../context/profile/profileContext';
 import CardItem from './CardItem';
 import Spinner from '../Spinner';
+import { GridColumn } from 'semantic-ui-react';
 
 const gridContainerStyle = {
     display: "grid",
     gridTemplateColumns: "auto auto auto",
-    padding: "10px"
+    padding: "10px",
+    GridColumnGap: "10px"
   }
+
+
 
 const Card = () => { 
     const profileContext = useContext(ProfileContext);

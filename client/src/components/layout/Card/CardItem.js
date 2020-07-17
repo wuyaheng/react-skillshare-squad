@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import ProfileContext from '../../../context/profile/profileContext';
 
 
+
+
+
 const CardItem = ({ profile }) => {
     const profileContext = useContext(ProfileContext);
     const { deleteProfile, setCurrent, clearCurrent } = profileContext;
@@ -17,7 +20,7 @@ const CardItem = ({ profile }) => {
 
 
     return (
-        <div className='card bg-light'>
+        <div className='card bg-light' style={{margin: "0.7rem"}}>
             {/* <h3 className='text-primary text-left'>
                 {name}{' '} <span style={{ float: 'right' }} 
                     className={'badge ' + (type === 'professional' ? 'badge-dark' : 'badge-dark' )}>
