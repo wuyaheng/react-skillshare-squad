@@ -1,9 +1,45 @@
 import React, { Component }from 'react';
 import ProfileContext from '../../context/profile/profileContext';
+import L from 'leaflet'
+
 
 
 
 class Detail extends Component {
+
+    componentDidMount(){
+
+   fetch(`http://www.mapquestapi.com/geocoding/v1/address?key=HbAqyAns3LoXacb0KaH60uoNyxmampoE&location=${this.props.location.query.zipcode}`)
+      .then(response => response.json())
+      .then(data => { 
+          console.log(data)
+         var {lat, lng} = data.results[0].locations[0].latLng    
+         var mymap = L.map('mapid').setView([lat, lng], 13);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: 'pk.eyJ1Ijoic3RhcmR1c3QxOTEiLCJhIjoiY2thNjMzZzdlMDNtdTJ6bWptaTFqa3Y2MSJ9.VIX2KRmemtC5qDAMyL9Jug'
+    }).addTo(mymap);
+    
+    var marker = L.marker([lat, lng]).addTo(mymap);
+    
+    var circle = L.circle([lat, lng], {
+        color: 'red',
+        fillColor: '#f03',
+        fillOpacity: 0.5,
+        radius: 500
+    }).addTo(mymap);
+    
+    var polygon = L.polygon([
+        [51.509, -0.08],
+        [51.503, -0.06],
+        [51.51, -0.047]
+    ]).addTo(mymap);
+        });
+    }
 
     render() {
         return (
@@ -20,7 +56,8 @@ class Detail extends Component {
             </ul>
             <p id="bio">{this.props.location.query.bio}</p>
 
-            <div id="mapid" className="mb-3"></div>
+            <div id="mapid" className="mb-3" style={{postion: "fixed", bottom: "0", width: "100%", height: "400px"}}>     
+            </div>
           </div>
         )
     }
