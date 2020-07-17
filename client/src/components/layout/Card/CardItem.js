@@ -27,22 +27,12 @@ const CardItem = ({ profile }) => {
             <ul className="list">
                 {firstname && ( 
                     <li>
-                        <i className='fas fa-envelope-open' /> {firstname}
-                    </li>
-                )}
-                {lastname && (
-                    <li>
-                        <i className='fas fa-phone' /> {lastname}
+                    <i class="fas fa-user"/> {firstname} {lastname}
                     </li>
                 )}
                 {city && (
                     <li>
-                        <i className='fas fa-phone' /> {city}
-                    </li>
-                )}
-                {zipcode && (
-                    <li>
-                        <i className='fas fa-phone' /> {zipcode}
+                    <i class="fas fa-map-marker-alt"/> {city} {zipcode}
                     </li>
                 )}
                 {skillshare && (
