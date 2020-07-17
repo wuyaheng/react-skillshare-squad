@@ -51,14 +51,14 @@ const Register = props => {
 };
     return (
 
-        <div className="row">
-        <div className='col-md-8'>
+        <div className="row mt-5">
+        <div className='col-md-6 mt-4'>
         <img className='responsive-img' src={removebg} alt="backgroundImg" />
       </div>
 
 
 
-        <div className='col-md-4 form-container mt-5 pt-3'>
+        <div className='col-md-6 form-container mt-5 pt-3'>
         <h1>
             Account <span className="text-primary">Register</span>
         </h1>

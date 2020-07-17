@@ -2,7 +2,7 @@ import React, { Fragment, useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import AuthContext from '../../context/auth/authContext';
-import ContactContext from '../../context/contact/contactContext';
+import ContactContext from '../../context/profile/profileContext';
 
 const Navbar = ({ title, icon }) => {
 
@@ -25,6 +25,8 @@ const Navbar = ({ title, icon }) => {
 
   const authLinks = (
     <Fragment>
+      <li className="mr-3"><Link to='/profile' className="btn btn-success"><i class="fas fa-user-edit"></i> Profile</Link></li>
+
       <li>Hello {user && user.name}</li>
       <li>
         <a onClick={onLogout} href='#!'>

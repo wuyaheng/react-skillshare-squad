@@ -67,17 +67,17 @@ const Login = (props) => {
      
         </div>
 
-        <div className='col-md-8'>
+        <div className='col-md-6'>
           <img className='responsive-img' src={bg} alt="backgroundImg" />
         </div>
 
 
      
-        <div className='col-md-4 mt-3' id="heading">
+        <div className='col-md-6 mt-3' id="heading">
 
 
         <div className='form-container'>
-        <h1>
+        <h1 className="text-center">
             Account <span className="text-primary">Login</span>
         </h1>
         <form onSubmit={onSubmit}>
