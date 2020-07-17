@@ -1,4 +1,4 @@
-import React, { useContext, Component }from 'react';
+import React, { Component }from 'react';
 import ProfileContext from '../../context/profile/profileContext';
 import axios from 'axios';
 
@@ -50,8 +50,7 @@ class Profile extends Component {
 
     render() {
         return (
-        <div class="container">
-        ​
+        <div class="container">        ​
         <h3 class="text-center mt-3">Join Us and Grow Your Skills Today</h3>
         <form id="survey-form">
             <div class="row">
@@ -128,7 +127,7 @@ class Profile extends Component {
                 Home
             </a>
             </div>
-        </form>
+        </form> 
         </div>
         )
     }

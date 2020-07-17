@@ -1,5 +1,5 @@
 import React from 'react'
-import Member from '../layout/Member/Member';
+import Team from '../layout/Team/Team';
 import ReactContactForm from 'react-mail-form';
 import Footer from '../layout/Footer/Footer';
 
@@ -15,10 +15,10 @@ const About = () => {
           <h4 className="text-center">Meet Our Awesome Team Members</h4>
           <div className="row">
           <div className="col-md-6">
-          <Member />
+          <Team />
           </div>
           <div className="col-md-6">
-          <Member />
+          <Team />
           </div>
   
           </div>
