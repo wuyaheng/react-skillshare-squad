@@ -37,17 +37,17 @@ const CardItem = ({ profile }) => {
                 )}
                 {skillshare && (
                     <li>
-                        <i className='fas fa-phone' /> {skillshare}
+                    <i class="fab fa-slideshare"/> {skillshare}
                     </li>
                 )}
                 {skillwanted && (
                     <li>
-                        <i className='fas fa-phone' /> {skillwanted}
+                    <i class="fas fa-book-reader"/> {skillwanted}
                     </li>
                 )}
                 {bio && (
                     <li>
-                        <i className='fas fa-phone' /> {bio}
+                    <i class="fas fa-info-circle"/> {bio}
                     </li>
                 )}
             </ul>
