@@ -123,7 +123,7 @@ class Profile extends Component {
             <a href="/members" type="submit" id="submit" onClick={this.handleSubmit} class="btn btn-outline-dark mr-3">
                 Submit
             </a>
-            <a href="/members" type="submit" class="btn btn-outline-dark">
+            <a href="/" type="submit" class="btn btn-outline-dark">
                 Home
             </a>
             </div>

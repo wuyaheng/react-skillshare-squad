@@ -1,5 +1,6 @@
 import React, { Component }from 'react';
 import ProfileContext from '../../context/profile/profileContext';
+import axios from 'axios';
 import L from 'leaflet'
 
 
@@ -56,7 +57,7 @@ class Detail extends Component {
             </ul>
             <p id="bio">{this.props.location.query.bio}</p>
 
-            <div id="mapid" className="mb-3" style={{postion: "fixed", bottom: "0", width: "100%", height: "400px"}}>     
+            <div id="mapid" className="mb-3">     
             </div>
           </div>
         )
