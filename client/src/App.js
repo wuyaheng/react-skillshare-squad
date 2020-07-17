@@ -6,6 +6,7 @@ import Navbar from './components/layout/Navbar';
 import Register from './components/auth/Register';
 import Profile from './components/pages/Profile';
 import Login from './components/auth/Login'; 
+import Detail from './components/pages/Detail';
 import Alerts from './components/layout/Alerts';  
 import PrivateRoute from './components/routing/PrivateRoute';
 
@@ -38,6 +39,7 @@ const App = () => {
               <Route exact path='/register' component={Register} />
               <Route exact path='/login' component={Login} /> 
               <Route exact path="/profile" component={Profile}/>
+              <Route exact path="/detail/:id" component={Detail}/>
             </Switch>
           </div>
       </Fragment>
