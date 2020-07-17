@@ -49,16 +49,17 @@ const CardItem = ({ profile }) => {
                     <i class="fas fa-book-reader"/> {skillwanted}
                     </li>
                 )}
-                {bio && (
+                {/* {bio && (
                     <li>
                     <i class="fas fa-info-circle"/> {bio}
                     </li>
-                )}
+                )} */}
             </ul>
             <p>
-                <button className="btn btn-dark btn-sm" onClick={() => setCurrent(profile)}>Edit</button>
-                <button className="btn btn-danger btn-sm" onClick={onDelete}>Delete</button>
-                <Link to={{pathname:`/detail/${_id}`, query:{firstname: firstname, lastname: lastname, bio: bio, city: city, zipcode: zipcode}}} className="btn btn-success btn-sm">Read More</Link>
+                {/* <button className="btn btn-dark btn-sm" onClick={() => setCurrent(profile)}>Edit</button>
+                <button className="btn btn-danger btn-sm" onClick={onDelete}>Delete</button> */}
+
+                <Link to={{pathname:`/detail/${_id}`, query:{firstname: firstname, lastname: lastname, skillshare: skillshare, skillwanted: skillwanted, bio: bio, city: city, zipcode: zipcode}}} className="btn btn-success btn-sm">Read More</Link>
 
 
             </p>
