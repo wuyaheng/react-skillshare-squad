@@ -14,11 +14,13 @@ class Detail extends Component {
  
             </div>
             <ul className="list-unstyled text-muted">
-              <li id="location"><i className="fas fa-map-marker-alt" aria-hidden="true"></i>{this.props.location.query.city} {this.props.location.query.zipcode}</li>
-              <a href="#"><li id="contactEmail"><i className="fas fa-link" aria-hidden="true"></i> </li></a>
-              <li><i className="far fa-calendar-alt" aria-hidden="true"></i> Joined a year ago</li>
+              <li id="location"><i className="fas fa-map-marker-alt" aria-hidden="true"></i> {this.props.location.query.city} {this.props.location.query.zipcode}</li>
+              {/* <a href="#"><li id="contactEmail"><i className="fas fa-link" aria-hidden="true"></i> </li></a> */}
+              {/* <li><i className="far fa-calendar-alt" aria-hidden="true"></i> Joined a year ago</li> */}
             </ul>
             <p id="bio">{this.props.location.query.bio}</p>
+
+            <div id="mapid" className="mb-3"></div>
           </div>
         )
     }
