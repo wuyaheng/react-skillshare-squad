@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect }from 'react';
 import AlertContext from '../../context/alert/alertContext';
 import AuthContext from '../../context/auth/authContext';
-import removebg from "../../asset/removebg.png"
+import removebg from "../../asset/fribg.svg"
 
 const Register = props => {
     const alertContext = useContext(AlertContext);
