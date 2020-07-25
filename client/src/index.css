@@ -24,3 +24,21 @@ a:hover {
   color: #fff;
   border-color: transparent !important;
 }
+
+
+.img-avatar {
+  height: 120px;
+  width: 120px;
+  margin: 10px auto 0 auto;
+  z-index: 10000 !important;
+}
+#hero-img {
+  max-height: 250px;
+  overflow: hidden;
+}
+.card-img-top {
+  display: block;
+  max-width: 100%;
+  height: auto !important;
+}
+

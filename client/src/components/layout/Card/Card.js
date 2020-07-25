@@ -39,7 +39,7 @@ const Card = () => {
             {filtered !== null
              ? filtered.map(profile => (
                  <CSSTransition key={profile._id} timeout={500} classNames="item">
-                <CardItem profile={profile} />
+                <CardItem profile={profile} />  
                 </CSSTransition>
              ))
             : profiles.map(profile => (

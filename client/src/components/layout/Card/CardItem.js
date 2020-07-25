@@ -19,6 +19,7 @@ const CardItem = ({ profile }) => {
 
     };
 
+    const url = `https://api.adorable.io/avatars/100/${_id}`;
 
     return (
         <div className='card bg-light' style={{margin: "0.7rem"}}>
@@ -29,6 +30,7 @@ const CardItem = ({ profile }) => {
                 </span>
             </h3> */}
             <ul className="list">
+            <img className='rounded-circle avatarImg' src={url} style={{width:"100px"}}/>
                 {firstname && ( 
                     <li>
                     <i class="fas fa-user"/> {firstname} {lastname}
